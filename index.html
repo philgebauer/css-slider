@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>XOME CSS Vars</title>
+  <title>CSS Slider</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="./style.css">
 </head>
@@ -22,8 +22,15 @@
     </div>
 
     <div class="wrap">
+        <label for="blur">Contrast:</label>
+        <input id="contrast" type="range" name="contrast" min="0" max="25" value="3" data-sizing="px">
+    </div>
+
+
+    <div class="wrap">
         <label for="base">Base Color:</label>
         <input id="base" type="color" name="base" value="#ffc600">
+
     </div>
 
   </div>

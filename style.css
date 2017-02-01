@@ -1,25 +1,7 @@
 :root {
-  --base: #ffc600;
-  --spacing: 10px;
-  --blur: 10px;
-}
-
-img {
-  padding: var(--spacing);
-  background: var(--base);
-  filter: blur(var(--blur));
-}
-
-.hl {
-  color: var(--base);
-}
-
-/*
-  misc styles, nothing to do with CSS variables
-*/
-
-body {
-  text-align: center;
+    --blur: 3px;
+    --base: #FFC600;
+    --spacing: 20px;
 }
 
 body {
@@ -27,13 +9,41 @@ body {
   color: white;
   font-family: 'helvetica neue', sans-serif;
   font-weight: 100;
-  font-size: 50px;
+  font-size: 40px;
+  text-align: center;
+}
+
+span.hl {
+    color: var(--base);
 }
 
 .controls {
   margin-bottom: 50px;
 }
 
+label {
+    user-select: none;
+    margin-left: 20px;
+}
+
 input {
   width:100px;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.wrap {
+    margin: 5px auto;
+    display: inline-block;
+}
+
+.wrap.img-wrap {
+    background-color: var(--base);
+}
+
+img {
+    filter: blur(var(--blur));
+    max-width: calc( 100% - var(--spacing)*2 );
+    display: block;
+    margin: var(--spacing);
 }
