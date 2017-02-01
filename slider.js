@@ -1,17 +1,13 @@
 (function(){
 
-  const elems = document.querySelectorAll('.controls input');
+  const inputs = document.querySelectorAll('.controls input');
 
-  const handleEvent = (e) => {
-      const type = e.target.name,
-          val = e.target.value,
-          suffix = e.target.dataset.sizing || '';
-      document.documentElement.style.setProperty(`--${type}`, `${val + suffix}`);
+  function handleUpdate() {
+    const suffix = this.dataset.sizing || '';
+    document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
   }
 
-  elems.forEach( (elem) => {
-      elem.addEventListener('change', handleEvent);
-      elem.addEventListener('mousemove', handleEvent);
-  });
+  inputs.forEach(input => input.addEventListener('change', handleUpdate));
+  inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
 
 }());
