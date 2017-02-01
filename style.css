@@ -3,12 +3,14 @@
   --spacing: 10px;
   --blur: 0px;
   --contrast: 100%;
+  --brightness: 100%;
+  --saturate: 100%;
 }
 
 img {
   padding: var(--spacing);
   background: var(--base);
-  filter: blur(var(--blur)) contrast(var(--contrast));
+  filter: contrast(var(--contrast)) brightness(var(--brightness)) saturate(var(--saturate));
 }
 
 .hl {
@@ -44,6 +46,6 @@ input {
     display: inline-block;
 }
 
-.wrap.img-wrap {
+/*.wrap.img-wrap {
     background-color: var(--base);
-}
+}*/
